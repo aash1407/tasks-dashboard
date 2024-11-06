@@ -1,0 +1,254 @@
+/* General body and dynamic background for light and dark mode */
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #7fe8f6 30%, #94a1f6 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    /* Light background gradient */
+    color: #333;
+    transition: background 0.5s ease;
+}
+
+.dark-mode {
+    background: linear-gradient(135deg, #2c3e50 30%, #4ca1af 100%);
+    /* Dark background gradient */
+    color: #f4f4f4;
+}
+
+/* Container for the entire app */
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dynamic and responsive header/title */
+.header {
+    font-size: 3em;
+    margin-left: 100px;
+    /* Larger font size */
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    /* Makes the text uppercase */
+    color: #04044a;
+    transition: color 0.5s ease;
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+}
+
+
+.dark-mode .header {
+    color: #f4f4f4;
+    /* Changes the color in dark mode */
+}
+
+/* Responsive title font size */
+@media screen and (max-width: 768px) {
+    .header {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        font-size: 2em;
+    }
+}
+
+/* Task Stats Container */
+.task-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 80%;
+}
+
+/* Stat Cards in a Row */
+.stat-container {
+    display: flex;
+    justify-content: space-between;
+    /* Space between the cards */
+    width: 80%;
+    /* Match this width to the progress bar and input field */
+    margin: 20px auto;
+    /* Center the container */
+    gap: 10px;
+    /* Space between each card */
+}
+
+.stat-card {
+    flex: 1;
+    /* Equal space for each card */
+    padding: 50px 20px;
+    /* Increase padding to make cards taller */
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 100px;
+    font-size: 2em ;
+    /* Set a minimum height for balanced proportions */
+}
+
+.stat-card.total {
+    background-color: #007bff;
+    /* Blue for total tasks */
+}
+
+.stat-card.completed {
+    background-color: #28a745;
+    /* Green for completed tasks */
+}
+
+.stat-card.pending {
+    background-color: #f57f17;
+    /* Orange for pending tasks */
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 80%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 60px;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: 0;
+    transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+/* Task List */
+.task-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 2em ;
+}
+
+.task.completed {
+    background-color: #c8e6c9;
+    /* Green background for completed tasks */
+    border-left: 4px solid #2e7d32;
+}
+
+.task.incomplete {
+    background-color: #ffecb3;
+    /* Yellow background for incomplete tasks */
+    border-left: 4px solid #f57f17;
+}
+
+.task:hover {
+    background-color: #f7f7f7;
+}
+
+.task.completed span {
+    text-decoration: line-through;
+    color: #2e7d32;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.styled-checkbox {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.styled-checkbox:checked {
+    background-color: #28a745;
+    /* Green checkbox when checked */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.theme-toggle.light {
+    background-color: white;
+    color: black;
+    margin-right: 80px;
+    /* Icon color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+}
+
+.theme-toggle.dark {
+    background-color: black;
+    color: white;
+    margin-right: 80px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.add-task-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Add space between input and button */
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.add-task-form input {
+    width: 60%;
+    /* Adjust width to make it larger */
+    padding: 10px;
+    /* Increase padding for a better feel */
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-task-form .btn-primary {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+}

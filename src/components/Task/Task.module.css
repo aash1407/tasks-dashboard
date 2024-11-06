@@ -1,0 +1,57 @@
+/* Task.module.css */
+
+/* Container for each task */
+.taskContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    font-size: 1.5em;
+}
+
+/* Style for completed tasks */
+.completedTask {
+    background-color: #c8e6c9;
+    border-left: 4px solid #2e7d32;
+}
+
+/* Style for incomplete tasks */
+.incompleteTask {
+    background-color: #ffecb3;
+    border-left: 4px solid #f57f17;
+}
+
+/* Custom styling for checkboxes */
+.checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+/* Text styling for completed task */
+.completedText {
+    text-decoration: line-through;
+    color: #2e7d32;
+    margin-left: 10px;
+}
+
+/* Delete button */
+.deleteButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #c0392b;
+}

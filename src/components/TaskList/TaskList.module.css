@@ -1,0 +1,81 @@
+/* Container for the task list */
+.taskListContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Styles for each individual task */
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    color: #333;
+    transition: all 0.3s ease;
+    font-size: 1.5em;
+    /* Adjust font size if needed */
+}
+
+/* Styles for completed tasks */
+.taskCompleted {
+    background-color: #c8e6c9;
+    /* Green background for completed tasks */
+    border-left: 4px solid #2e7d32;
+}
+
+/* Styles for incomplete tasks */
+.taskIncomplete {
+    background-color: #ffecb3;
+    /* Yellow background for incomplete tasks */
+    border-left: 4px solid #f57f17;
+}
+
+/* Hover effect for tasks */
+.taskItem:hover {
+    background-color: #f7f7f7;
+}
+
+/* Strikethrough style for completed task text */
+.taskTextCompleted {
+    text-decoration: line-through;
+    color: #2e7d32;
+}
+
+/* Checkbox styling */
+.checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Styles for custom checkbox */
+.styledCheckbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for checked custom checkbox */
+.styledCheckboxChecked {
+    background-color: #28a745;
+    /* Green checkbox when checked */
+}
+
+/* Delete button styles */
+.btnDanger {
+    background-color: #e74c3c;
+    transition: background-color 0.3s ease;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnDanger:hover {
+    background-color: #c0392b;
+}

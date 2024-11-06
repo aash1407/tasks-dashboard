@@ -1,0 +1,18 @@
+.header {
+    font-size: 3em;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #04044a;
+    transition: color 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.dark {
+    color: #f4f4f4;
+}

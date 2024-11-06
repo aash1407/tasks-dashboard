@@ -1,0 +1,22 @@
+.addTaskForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.input {
+    width: 60%;
+    padding: 10px;
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btnPrimary {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+}
